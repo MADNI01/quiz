@@ -59,6 +59,7 @@ function getquestion() {
                 }
                 if(chosenAnswer === right){
                     rightAnswers++
+                    console.log(rightAnswers)
                     
                 }
 
@@ -133,7 +134,7 @@ function end(qLength) {
     if(currentQuestion ===qLength){
         container.remove();
         endScreen.style.display = "flex"
-        let endText = document.createTextNode(`you answerd correctly at ${rightAnswers}/${qLength}`)
+        let endText = document.createTextNode(`you answerd correctly at ${rightAnswers++}/${qLength}`)
         endScreen.appendChild(endText)
         let endBtn = document.createElement("span");
         let endBtnText= document.createTextNode("TryAgain")
